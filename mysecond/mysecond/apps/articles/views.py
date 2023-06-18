@@ -1,7 +1,4 @@
-from django.http import HttpResponse
+from django.shortcuts import render
 
 def index(request):
-    return HttpResponse("Привет, мир!")
-
-def test(request):
-    return HttpResponse("ТЕСТОВАЯ СТРАНИЦА!")
+    return render(request, 'articles/list.html')
